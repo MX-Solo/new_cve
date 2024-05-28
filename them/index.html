@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Various Inputs</title>
+    <link rel="stylesheet" href="./css/persian-datepicker.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/froala_editor.css">
+    <link rel="stylesheet" href="./css/froala_style.css">
+    <link rel="stylesheet" href="./css/plugins/code_view.css">
+    <link rel="stylesheet" href="./css/plugins/draggable.css">
+    <link rel="stylesheet" href="./css/plugins/colors.css">
+    <link rel="stylesheet" href="./css/plugins/emoticons.css">
+    <link rel="stylesheet" href="./css/plugins/image_manager.css">
+    <link rel="stylesheet" href="./css/plugins/image.css">
+    <link rel="stylesheet" href="./css/plugins/line_breaker.css">
+    <link rel="stylesheet" href="./css/plugins/table.css">
+    <link rel="stylesheet" href="./css/plugins/char_counter.css">
+    <link rel="stylesheet" href="./css/plugins/video.css">
+    <link rel="stylesheet" href="./css/plugins/fullscreen.css">
+    <link rel="stylesheet" href="./css/plugins/file.css">
+    <link rel="stylesheet" href="./css/plugins/quick_insert.css">
+    <link rel="stylesheet" href="./css/plugins/help.css">
+    <link rel="stylesheet" href="./css/third_party/spell_checker.css">
+    <link rel="stylesheet" href="./css/plugins/special_characters.css">
+    <link rel="stylesheet" href="./css/codemirror.min.css">
+
+</head>
+
+<body>
+    <div class="container" style="text-align: right;">
+        <form id="myForm">
+            <div class="form-group" style="margin-top: 50px;">
+                <label for="title">: تیتر</label>
+                <input style="text-align: right;direction: rtl;" type="text" id="title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="file">: عکس</label>
+                <input style="text-align: right;" type="file" id="file" name="file" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="source">: منبع</label>
+                <input style="text-align: right;direction: rtl;" type="text" id="source" name="source">
+            </div>
+            <div class="form-group">
+                <label for="link">: پیوند</label>
+                <input style="text-align: right;" type="text" id="link" name="link">
+            </div>
+            <div class="form-group">
+                <label for="summary">: خلاصه</label>
+                <textarea style="text-align: right;direction: rtl;" id="summary" name="summary" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="info">: شرح</label>
+                <div id="editor"><div id='edit' style="margin-top: 30px;"></div></div>
+            </div>
+            <alireza name="info" id="info" style="display: none;"></alireza>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="date">: تاریخ انتشار</label>
+                    <input type="text" id="date" name="publish_date" class="pdate">
+                </div>
+            </div>
+            <label for="chart">: چارت سازمانی</label>
+            <div class="form-group"
+                style="display: inline-flex; flex-direction: column; overflow: scroll; height: 5rem; width: 50%">
+                <div class="checkbox-group">
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah0"> مدیریت عامل</label>
+                        <input id="azmayeshgah0" name="chart" style="margin-right: 10px;" type="checkbox" value="1" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah1"> رئیس هیئت مدیره</label>
+                        <input id="azmayeshgah1" name="chart" style="margin-right: 10px;" type="checkbox" value="92" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah2"> اداره امنیت اطلاعات</label>
+                        <input id="azmayeshgah2" name="chart" style="margin-right: 10px;" type="checkbox" value="2" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah3"> معاونت عملیات امنیت اطلاعات</label>
+                        <input id="azmayeshgah3" name="chart" style="margin-right: 10px;" type="checkbox" value="3" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah4"> SOC</label>
+                        <input id="azmayeshgah4" name="chart" style="margin-right: 10px;" type="checkbox" value="8" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah5"> آزمایشگاه امنیت</label>
+                        <input id="azmayeshgah5" name="chart" style="margin-right: 10px;" type="checkbox" value="12" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah6"> پیمانکاران آزمون نفوذ گروه آزمایشگاه امنیت</label>
+                        <input id="azmayeshgah6" name="chart" style="margin-right: 10px;" type="checkbox" value="112" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah7"> آزمونگران شرکت زفتا</label>
+                        <input id="azmayeshgah7" name="chart" style="margin-right: 10px;" type="checkbox" value="113" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah8"> زیرساخت و سرویس‌های امنیتی</label>
+                        <input id="azmayeshgah8" name="chart" style="margin-right: 10px;" type="checkbox" value="4" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah9"> پیمانکاران گروه زیرساخت امنیتی-شرکت زفتا</label>
+                        <input id="azmayeshgah9" name="chart" style="margin-right: 10px;" type="checkbox" value="110" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah10"> پیمانکاران گروه زیرساخت امنیتی-شرکت دوران</label>
+                        <input id="azmayeshgah10" name="chart" style="margin-right: 10px;" type="checkbox" value="111" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah11"> NOC</label>
+                        <input id="azmayeshgah11" name="chart" style="margin-right: 10px;" type="checkbox" value="14" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah12"> CSIRT</label>
+                        <input id="azmayeshgah12" name="chart" style="margin-right: 10px;" type="checkbox" value="21" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah13"> معاونت سیاست گذاری</label>
+                        <input id="azmayeshgah13" name="chart" style="margin-right: 10px;" type="checkbox" value="11" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah14"> گروه کارشناسی سیاست گذاری آموزشی</label>
+                        <input id="azmayeshgah14" name="chart" style="margin-right: 10px;" type="checkbox" value="20" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah15"> گروه کارشناسی معماری داده و حریم خصوصی</label>
+                        <input id="azmayeshgah15" name="chart" style="margin-right: 10px;" type="checkbox" value="22" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah16"> معاونت نظارت</label>
+                        <input id="azmayeshgah16" name="chart" style="margin-right: 10px;" type="checkbox" value="13" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah17"> گروه کارشناسی انطباق</label>
+                        <input id="azmayeshgah17" name="chart" style="margin-right: 10px;" type="checkbox" value="23" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah18"> گروه کارشناسی شرکت ها و پروژه ها</label>
+                        <input id="azmayeshgah18" name="chart" style="margin-right: 10px;" type="checkbox" value="24" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah19"> گروه کارشناسی ممیزی</label>
+                        <input id="azmayeshgah19" name="chart" style="margin-right: 10px;" type="checkbox" value="25" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah20"> مدیریت امور راهبری فناوری اطلاعات</label>
+                        <input id="azmayeshgah20" name="chart" style="margin-right: 10px;" type="checkbox" value="15" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah21"> اداره زیرساخت و سرویس‌های پایه</label>
+                        <input id="azmayeshgah21" name="chart" style="margin-right: 10px;" type="checkbox" value="16" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah22"> معاونت پردازش مرکزی و HOST</label>
+                        <input id="azmayeshgah22" name="chart" style="margin-right: 10px;" type="checkbox" value="37" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah23"> دایره پردازش مرکزی 1</label>
+                        <input id="azmayeshgah23" name="chart" style="margin-right: 10px;" type="checkbox" value="40" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah24"> دایره پردازش مرکزی 2</label>
+                        <input id="azmayeshgah24" name="chart" style="margin-right: 10px;" type="checkbox" value="41" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah25"> دایره پردازش مرکزی 3</label>
+                        <input id="azmayeshgah25" name="chart" style="margin-right: 10px;" type="checkbox" value="42" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah26"> دایره کنترل انتقال داده</label>
+                        <input id="azmayeshgah26" name="chart" style="margin-right: 10px;" type="checkbox" value="43" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah27"> گروه کارشناسی پشتیبانی HOST</label>
+                        <input id="azmayeshgah27" name="chart" style="margin-right: 10px;" type="checkbox" value="44" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah28"> معاونت راهبری مرکز داده</label>
+                        <input id="azmayeshgah28" name="chart" style="margin-right: 10px;" type="checkbox" value="38" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah29"> گروه کارشناسی پردازش و ذخیره سازی در سایت ها</label>
+                        <input id="azmayeshgah29" name="chart" style="margin-right: 10px;" type="checkbox" value="45" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah30"> گروه کارشناسی نسخ پشتیبان</label>
+                        <input id="azmayeshgah30" name="chart" style="margin-right: 10px;" type="checkbox" value="46" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah31"> گروه کارشناسی نظارت و توسعه مراکز داده</label>
+                        <input id="azmayeshgah31" name="chart" style="margin-right: 10px;" type="checkbox" value="47" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah32"> معاونت راهبری شبکه، سخت افزار و سیستم های پایه</label>
+                        <input id="azmayeshgah32" name="chart" style="margin-right: 10px;" type="checkbox" value="39" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah33"> گروه کارشناسی راهبری واحدهای ستادی</label>
+                        <input id="azmayeshgah33" name="chart" style="margin-right: 10px;" type="checkbox" value="48" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah34"> گروه کارشناسی راهبری شبکه و ارتباطات</label>
+                        <input id="azmayeshgah34" name="chart" style="margin-right: 10px;" type="checkbox" value="49" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah35"> گروه کارشناسی مدیرت و تامین تجهیزات</label>
+                        <input id="azmayeshgah35" name="chart" style="margin-right: 10px;" type="checkbox" value="50" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah36"> اداره مهندسی نرم افزار</label>
+                        <input id="azmayeshgah36" name="chart" style="margin-right: 10px;" type="checkbox" value="17" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah37"> معاونت توسعه سامانه های صف</label>
+                        <input id="azmayeshgah37" name="chart" style="margin-right: 10px;" type="checkbox" value="51" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah38"> گروه کارشناسی کاربردی صف 1</label>
+                        <input id="azmayeshgah38" name="chart" style="margin-right: 10px;" type="checkbox" value="54" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah39"> گروه کارشناسی کاربردی صف2</label>
+                        <input id="azmayeshgah39" name="chart" style="margin-right: 10px;" type="checkbox" value="55" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah40"> گروه کارشناسی کاربردی صف 3</label>
+                        <input id="azmayeshgah40" name="chart" style="margin-right: 10px;" type="checkbox" value="56" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah41"> گروه کارشناسی کاربردی صف 4</label>
+                        <input id="azmayeshgah41" name="chart" style="margin-right: 10px;" type="checkbox" value="57" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah42"> گروه کارشناسی کاربردی اعتباری</label>
+                        <input id="azmayeshgah42" name="chart" style="margin-right: 10px;" type="checkbox" value="58" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah43"> ارزی</label>
+                        <input id="azmayeshgah43" name="chart" style="margin-right: 10px;" type="checkbox" value="114" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah44"> معاونت توسعه سامانه های ستاد، بانک های اطلاعاتی و SGB</label>
+                        <input id="azmayeshgah44" name="chart" style="margin-right: 10px;" type="checkbox" value="52" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah45"> گروه کارشناسی برنامه های کاربردی ستادی1-گروه کارشناسی منابع</label>
+                        <input id="azmayeshgah45" name="chart" style="margin-right: 10px;" type="checkbox" value="61" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah46"> گروه کارشناسی برنامه های کاربردی ستادی2-نظارت بر سامانه های برون</label>
+                        <input id="azmayeshgah46" name="chart" style="margin-right: 10px;" type="checkbox" value="62" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah47"> گروه کارشناسی برنامه های کاربردی ستادی3-گروه کارشناسی تدارکات</label>
+                        <input id="azmayeshgah47" name="chart" style="margin-right: 10px;" type="checkbox" value="63" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah48"> گروه کارشناسی مدیریت و توسعه سرویس ها</label>
+                        <input id="azmayeshgah48" name="chart" style="margin-right: 10px;" type="checkbox" value="64" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah49"> گروه کارشناسی انبار داده</label>
+                        <input id="azmayeshgah49" name="chart" style="margin-right: 10px;" type="checkbox" value="65" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah50"> گروه کارشناسی بانک های اطلاعاتی</label>
+                        <input id="azmayeshgah50" name="chart" style="margin-right: 10px;" type="checkbox" value="66" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah51"> گروه کارشناسی سامانه های SGB1</label>
+                        <input id="azmayeshgah51" name="chart" style="margin-right: 10px;" type="checkbox" value="67" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah52"> گروه کارشناسی سامانه های SGB 2</label>
+                        <input id="azmayeshgah52" name="chart" style="margin-right: 10px;" type="checkbox" value="68" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah53"> معاونت سوییچ و درگاه های غیر حضوری</label>
+                        <input id="azmayeshgah53" name="chart" style="margin-right: 10px;" type="checkbox" value="53" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah54"> گروه کارشناسی توسعه خدمات نوین</label>
+                        <input id="azmayeshgah54" name="chart" style="margin-right: 10px;" type="checkbox" value="59" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah55"> گروه کارشناسی توسعه سوئیچ</label>
+                        <input id="azmayeshgah55" name="chart" style="margin-right: 10px;" type="checkbox" value="60" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah56"> اداره عملیات و بهره برداری</label>
+                        <input id="azmayeshgah56" name="chart" style="margin-right: 10px;" type="checkbox" value="18" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah57"> معاونت پشتیبانی سامانه های صف و ستاد</label>
+                        <input id="azmayeshgah57" name="chart" style="margin-right: 10px;" type="checkbox" value="26" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah58"> گروه کارشناسی پشتیبانی برنامه های کاربردی ستاد</label>
+                        <input id="azmayeshgah58" name="chart" style="margin-right: 10px;" type="checkbox" value="34" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah59"> گروه کارشناسی پشتیبانی برنامه های کاربردی صف</label>
+                        <input id="azmayeshgah59" name="chart" style="margin-right: 10px;" type="checkbox" value="35" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah60"> گروه های پشتیبانی مدیریت های شعب</label>
+                        <input id="azmayeshgah60" name="chart" style="margin-right: 10px;" type="checkbox" value="36" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah61"> معاونت پشتیبانی مشتریان ارزنده</label>
+                        <input id="azmayeshgah61" name="chart" style="margin-right: 10px;" type="checkbox" value="27" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah62"> گروه کارشناسی و توسعه مشتریان ارزنده</label>
+                        <input id="azmayeshgah62" name="chart" style="margin-right: 10px;" type="checkbox" value="33" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah63"> معاونت عملیات و بهره برداری سامانه های غیر حضوری</label>
+                        <input id="azmayeshgah63" name="chart" style="margin-right: 10px;" type="checkbox" value="28" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah64"> گروه کارشناسی پشتیبانی کارت</label>
+                        <input id="azmayeshgah64" name="chart" style="margin-right: 10px;" type="checkbox" value="29" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah65"> گروه کارشناسی پشتیبانی خدمات نوین</label>
+                        <input id="azmayeshgah65" name="chart" style="margin-right: 10px;" type="checkbox" value="30" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah66"> گروه کارشناسی پشتیبانی سوییچ</label>
+                        <input id="azmayeshgah66" name="chart" style="margin-right: 10px;" type="checkbox" value="31" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah67"> دایره پشتیبانی POS/ATM</label>
+                        <input id="azmayeshgah67" name="chart" style="margin-right: 10px;" type="checkbox" value="32" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah68"> دایره دبیرخانه</label>
+                        <input id="azmayeshgah68" name="chart" style="margin-right: 10px;" type="checkbox" value="89" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah69"> گروه کارشناسی نظارت بر پایداری خدمات</label>
+                        <input id="azmayeshgah69" name="chart" style="margin-right: 10px;" type="checkbox" value="90" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah70"> گروه کارشناسی کنترل پروژه و امور قراردادها</label>
+                        <input id="azmayeshgah70" name="chart" style="margin-right: 10px;" type="checkbox" value="91" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah71"> هوش تجاری</label>
+                        <input id="azmayeshgah71" name="chart" style="margin-right: 10px;" type="checkbox" value="106" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah72"> مدیریت امور تحول فناوری اطلاعات</label>
+                        <input id="azmayeshgah72" name="chart" style="margin-right: 10px;" type="checkbox" value="69" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah73"> گروه کارشناسی داده کاوی</label>
+                        <input id="azmayeshgah73" name="chart" style="margin-right: 10px;" type="checkbox" value="70" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah74"> اداره سامانه جامع بانکی</label>
+                        <input id="azmayeshgah74" name="chart" style="margin-right: 10px;" type="checkbox" value="71" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah75"> تیم پروژه های کارشناسی</label>
+                        <input id="azmayeshgah75" name="chart" style="margin-right: 10px;" type="checkbox" value="73" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah76"> معاونت سوییچ، درگاه و پذیرندگی</label>
+                        <input id="azmayeshgah76" name="chart" style="margin-right: 10px;" type="checkbox" value="74" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah77"> گروه کارشناسی سوییچ، سرویس ها و مدیریت کارت</label>
+                        <input id="azmayeshgah77" name="chart" style="margin-right: 10px;" type="checkbox" value="78" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah78"> گروه کارشناسی پذیرندگی و درگاه ها</label>
+                        <input id="azmayeshgah78" name="chart" style="margin-right: 10px;" type="checkbox" value="79" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah79"> معاونت سامانه های منظومه تجارت و جامع مالی</label>
+                        <input id="azmayeshgah79" name="chart" style="margin-right: 10px;" type="checkbox" value="75" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah80"> گروه کارشناسی سامانه جامع مالی</label>
+                        <input id="azmayeshgah80" name="chart" style="margin-right: 10px;" type="checkbox" value="76" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah81"> گروه کارشناسی سامانه حساب سپرده و تحویلداری</label>
+                        <input id="azmayeshgah81" name="chart" style="margin-right: 10px;" type="checkbox" value="77" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah82"> اداره برنامه ریزی تحول فناوری اطلاعات</label>
+                        <input id="azmayeshgah82" name="chart" style="margin-right: 10px;" type="checkbox" value="72" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah83"> معاون برنامه ریزی و کنترل پروژه</label>
+                        <input id="azmayeshgah83" name="chart" style="margin-right: 10px;" type="checkbox" value="81" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah84"> گروه کارشناسی برنامه ریزی، تطبیق استانداردها</label>
+                        <input id="azmayeshgah84" name="chart" style="margin-right: 10px;" type="checkbox" value="86" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah85"> گروه کارشناسی مدیریت برنامه ها و کنترل پروژه</label>
+                        <input id="azmayeshgah85" name="chart" style="margin-right: 10px;" type="checkbox" value="87" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah86"> معاون آموزش، توسعه و مدیریت قراردادها</label>
+                        <input id="azmayeshgah86" name="chart" style="margin-right: 10px;" type="checkbox" value="82" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah87"> گروه کارشناسی معماری سیستم ها</label>
+                        <input id="azmayeshgah87" name="chart" style="margin-right: 10px;" type="checkbox" value="83" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah88"> گروه کارشناسی مدیریت برنامه ریزی آموزشی</label>
+                        <input id="azmayeshgah88" name="chart" style="margin-right: 10px;" type="checkbox" value="84" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah89"> گروه کارشناسی مدیریت قراردادها</label>
+                        <input id="azmayeshgah89" name="chart" style="margin-right: 10px;" type="checkbox" value="85" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah90"> دایره دبیرخانه</label>
+                        <input id="azmayeshgah90" name="chart" style="margin-right: 10px;" type="checkbox" value="88" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah91"> امور استان‌ها</label>
+                        <input id="azmayeshgah91" name="chart" style="margin-right: 10px;" type="checkbox" value="93" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah92"> بانکداری شخصی</label>
+                        <input id="azmayeshgah92" name="chart" style="margin-right: 10px;" type="checkbox" value="94" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah93"> بانکداری شرکتی</label>
+                        <input id="azmayeshgah93" name="chart" style="margin-right: 10px;" type="checkbox" value="95" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah94"> بانکداری اصناف</label>
+                        <input id="azmayeshgah94" name="chart" style="margin-right: 10px;" type="checkbox" value="97" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah95"> بانکداری تجاری</label>
+                        <input id="azmayeshgah95" name="chart" style="margin-right: 10px;" type="checkbox" value="109" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah96"> بدون مالک</label>
+                        <input id="azmayeshgah96" name="chart" style="margin-right: 10px;" type="checkbox" value="96" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah97"> شرکت ها</label>
+                        <input id="azmayeshgah97" name="chart" style="margin-right: 10px;" type="checkbox" value="98" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah98"> چابک</label>
+                        <input id="azmayeshgah98" name="chart" style="margin-right: 10px;" type="checkbox" value="100" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah99"> شرکت ایران کیش</label>
+                        <input id="azmayeshgah99" name="chart" style="margin-right: 10px;" type="checkbox" value="101" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah100"> شرکت تدبیرگران فردای امید</label>
+                        <input id="azmayeshgah100" name="chart" style="margin-right: 10px;" type="checkbox" value="102" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah101"> شرکت تعاونی</label>
+                        <input id="azmayeshgah101" name="chart" style="margin-right: 10px;" type="checkbox" value="103" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah102"> شرکت تکنو تجارت</label>
+                        <input id="azmayeshgah102" name="chart" style="margin-right: 10px;" type="checkbox" value="104" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah103"> شرکت سیمرغ</label>
+                        <input id="azmayeshgah103" name="chart" style="margin-right: 10px;" type="checkbox" value="105" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah104"> معاونت سرمایه انسانی</label>
+                        <input id="azmayeshgah104" name="chart" style="margin-right: 10px;" type="checkbox" value="107" />
+                    </div>
+                    <div style="display: ruby-text; gap: 10px;">
+                        <label for="azmayeshgah105"> اداره رفاه و جبران خدمات</label>
+                        <input id="azmayeshgah105" name="chart" style="margin-right: 10px;" type="checkbox" value="108" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tags">: برچسب ها</label>
+                <input type="text" id="tagsInput" placeholder="">
+                <button type="button" id="addTagBtn">اضافه کردن برچسب</button>
+                <div class="tag-container" id="tagsContainer"></div>
+            </div>
+            <button type="button" id="saveBtn" style="background-color: brown;margin-bottom:50px;">ذخیره در فایل
+                JSON</button>
+
+            <div class="form-group">
+                <label for="uploadJson">آپلود فایل JSON</label>
+                <input type="file" id="uploadJson" accept=".json">
+            </div>
+                
+        </form>
+    </div>
+
+    <script src="./js/script.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tagsInput = document.getElementById("tagsInput");
+        const addTagBtn = document.getElementById("addTagBtn");
+        const tagsContainer = document.getElementById("tagsContainer");
+        const saveBtn = document.getElementById("saveBtn");
+        const fileInput = document.getElementById("file");
+        const uploadJsonInput = document.getElementById("uploadJson");
+
+        let formData = {};
+
+        addTagBtn.addEventListener("click", function () {
+            const tagText = tagsInput.value.trim();
+
+            if (tagText !== "") {
+                const tagSpan = document.createElement("span");
+                tagSpan.textContent = tagText;
+                tagsContainer.appendChild(tagSpan);
+
+                // Add tag to formData
+                if (!formData.tags) {
+                    formData.tags = [];
+                }
+                formData.tags.push(tagText);
+
+                // Clear input
+                tagsInput.value = "";
+            }
+        });
+
+        // Function to update tagsContainer with formData values
+        function updateTagsContainer() {
+            // Clear existing tags
+            tagsContainer.innerHTML = "";
+
+            // Add tags from formData
+            if (formData.tags) {
+                formData.tags.forEach(tagText => {
+                    const tagSpan = document.createElement("span");
+                    tagSpan.textContent = tagText;
+                    tagsContainer.appendChild(tagSpan);
+                });
+            }
+
+            // Check if JSON data has 'info' field and append its value to a specific tag
+            if (formData.info) {
+                // Check if there is a div with class 'fr-floating-btn'
+                const frFloatingBtnDiv = document.getElementsByClassName("fr-element fr-view");
+                if (frFloatingBtnDiv) {
+                    // Assign the value of 'info' field to the text content of the div
+                    frFloatingBtnDiv[0].style = "direction: rtl";
+                    frFloatingBtnDiv[0].style = "text-align: right";
+                    frFloatingBtnDiv[0].innerHTML = formData.info;
+                }
+            }
+        }
+
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files[0];
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const jsonData = JSON.parse(event.target.result);
+
+                // Assign JSON data to formData
+                Object.assign(formData, jsonData);
+
+                // Update tagsContainer
+                updateTagsContainer();
+            };
+            reader.readAsText(file);
+        });
+
+        uploadJsonInput.addEventListener("change", function () {
+            const file = uploadJsonInput.files[0];
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const jsonData = JSON.parse(event.target.result);
+
+                // Assign JSON data to formData
+                Object.assign(formData, jsonData);
+
+                // Update tagsContainer
+                updateTagsContainer();
+            };
+            reader.readAsText(file);
+        });
+
+        saveBtn.addEventListener("click", function () {
+            // Your save button logic here
+        });
+
+        // Initial update of tagsContainer
+        updateTagsContainer();
+    });
+</script>
+
+
+    <!-- tgs set -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const tagsInput = document.getElementById("tagsInput");
+    const addTagBtn = document.getElementById("addTagBtn");
+    const tagsContainer = document.getElementById("tagsContainer");
+    const saveBtn = document.getElementById("saveBtn");
+    const fileInput = document.getElementById("file");
+    const uploadJsonInput = document.getElementById("uploadJson");
+
+    let formData = {};
+
+    addTagBtn.addEventListener("click", function () {
+        const tagText = tagsInput.value.trim();
+
+        if (tagText !== "") {
+            const tagSpan = document.createElement("span");
+            tagSpan.textContent = tagText;
+            tagsContainer.appendChild(tagSpan);
+
+            // Add tag to formData
+            if (!formData.tags) {
+                formData.tags = [];
+            }
+            formData.tags.push(tagText);
+
+            // Clear input
+            tagsInput.value = "";
+        }
+    });
+
+    fileInput.addEventListener("change", function () {
+        const file = fileInput.files[0];
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const imageData = event.target.result;
+            const base64Image = imageData.split(",")[1]; // Remove data:image/jpeg;base64, part
+
+            formData.image = base64Image;
+        };
+        reader.readAsDataURL(file);
+    });
+
+    uploadJsonInput.addEventListener("change", function () {
+        const file = uploadJsonInput.files[0];
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const jsonData = JSON.parse(event.target.result);
+
+            // Assign JSON data to formData
+            Object.assign(formData, jsonData);
+
+            // Update form inputs
+            updateFormInputs();
+        };
+        reader.readAsText(file);
+    });
+
+    saveBtn.addEventListener("click", function () {
+        // Get all input values
+        document.getElementById("info").innerHTML = editor.html.get()
+        
+        const inputs = document.querySelectorAll("input[type=text] , textarea, alireza, input[type=checkbox]:checked");
+        inputs.forEach(input => {
+            if (input.type === "checkbox") {
+                if (!formData[input.name]) {
+                    formData[input.name] = [];
+                }
+                formData[input.name].push(input.value);
+            } else if(input.getAttribute("name") === "info") {
+                // Check if the input is 'info'
+                const infoDiv = document.createElement("div");
+                infoDiv.className = "fr-element fr-view";
+                infoDiv.setAttribute("dir", "auto");
+                infoDiv.setAttribute("contenteditable", "true");
+                infoDiv.setAttribute("aria-disabled", "false");
+                infoDiv.setAttribute("spellcheck", "true");
+                infoDiv.innerHTML = input.innerHTML;
+                formData[input.getAttribute("name")] = infoDiv.outerHTML; // Store the HTML content
+            } else {
+                formData[input.name] = input.value;
+            }
+        });
+
+        // Remove null or undefined values from formData
+        formData = removeNullOrUndefinedValues(formData);
+
+        // Convert formData.chart to a unique array
+        if (formData.chart) {
+            formData.chart = getUniqueArray(formData.chart);
+        }
+
+        // Check for empty fields and remove them
+        formData = removeEmptyFields(formData);
+
+        // Convert formData to JSON
+        const jsonData = JSON.stringify(formData);
+
+        // Save JSON to file
+        const blob = new Blob([jsonData], {type: "application/json"});
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "form_data.json";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+
+    // Function to update form inputs with formData values
+    function updateFormInputs() {
+        const inputs = document.querySelectorAll("input[type=text] , textarea, alireza, input[type=checkbox]");
+        inputs.forEach(input => {
+            if (input.type === "checkbox") {
+                if (formData[input.name] && formData[input.name].includes(input.value)) {
+                    input.checked = true;
+                }
+            } else if(input.getAttribute("name") === "info") {
+                const infoHTML = formData[input.getAttribute("name")]; // Get the stored HTML content
+                const infoDiv = document.createElement("div");
+                infoDiv.className = "fr-element fr-view";
+                infoDiv.setAttribute("dir", "auto");
+                infoDiv.setAttribute("contenteditable", "true");
+                infoDiv.setAttribute("aria-disabled", "false");
+                infoDiv.setAttribute("spellcheck", "true");
+                infoDiv.innerHTML = infoHTML;
+                input.innerHTML = infoDiv.outerHTML; // Set the HTML content
+            } else {
+                input.value = formData[input.name] || "";
+            }
+        });
+    }
+});
+
+function removeNullOrUndefinedValues(obj) {
+    return Object.fromEntries(Object.entries(obj).filter(([_, v]) => v !== null && v !== undefined));
+}
+
+function getUniqueArray(arr) {
+    return [...new Set(arr)];
+}
+
+function removeEmptyFields(obj) {
+    Object.keys(obj).forEach(key => {
+        if (obj[key] === "" || obj[key] === undefined) {
+            delete obj[key];
+        }
+    });
+    return obj;
+}
+</script>
+
+    </script>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/persian-date.min.js"></script>
+    <script src="./js/persian-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".pdate").persianDatepicker({
+                altField: '#date',
+                observer: true,
+                format: 'YYYY/MM/DD',
+                altFormat: 'YYYY-MM-DD',
+                initialValue: false,
+                initialValueType: 'persian',
+                onSelect: function (persianDate) {
+                    // تاریخ شمسی را به میلادی تبدیل کنید
+                    const date = new Date(persianDate);
+
+                    const year = date.getFullYear();
+                    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // برای افزودن صفر به ماه‌های یک رقمی
+                    const day = date.getDate().toString().padStart(2, '0'); // برای افزودن صفر به روزهای یک رقمی
+
+                    const formattedDate = `${year}-${month}-${day}`;
+
+                    console.log(formattedDate);
+
+
+                    // تاریخ میلادی را به #date ارسال کنید
+                    $('#date').val(formattedDate);
+                }
+            });
+        });
+    </script>
+    
+
+  <script type="text/javascript" src="./js/codemirror.min.js"></script>
+  <script type="text/javascript" src="./js/xml.min.js"></script>
+  <script type="text/javascript" src="./js/froala_editor.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/align.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/char_counter.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/code_beautifier.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/code_view.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/colors.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/draggable.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/emoticons.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/entities.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/file.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/font_size.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/font_family.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/fullscreen.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/image.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/image_manager.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/line_breaker.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/inline_style.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/link.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/lists.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/paragraph_format.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/paragraph_style.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/quick_insert.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/quote.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/table.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/save.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/url.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/video.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/help.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/print.min.js"></script>
+  <script type="text/javascript" src="./js/third_party/spell_checker.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/special_characters.min.js"></script>
+  <script type="text/javascript" src="./js/plugins/word_paste.min.js"></script>
+  <script>
+    let editor = new FroalaEditor('#edit', {}, function () {
+      document.getElementById("info").innerHTML = editor.html.get()
+      console.log(editor.html.get())
+    });
+    document.getElementById("myButton").addEventListener("click", function(e) {
+        e.preventDefault();
+      document.getElementById("info").innerHTML = editor.html.get()
+    });
+  </script>
+</body>
+
+</html>

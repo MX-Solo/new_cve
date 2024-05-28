@@ -1,0 +1,42 @@
+CVE: CVE-2024-5109
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%2014.pdf
+https://vuldb.com/?ctiid.265099
+https://vuldb.com/?id.265099
+https://vuldb.com/?submit.338513
+
+CVE: CVE-2024-5108
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%2013.pdf
+https://vuldb.com/?ctiid.265098
+https://vuldb.com/?id.265098
+https://vuldb.com/?submit.338512
+
+CVE: CVE-2024-5107
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%2012.pdf
+https://vuldb.com/?ctiid.265097
+https://vuldb.com/?id.265097
+https://vuldb.com/?submit.338511
+
+CVE: CVE-2024-5106
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%2011.pdf
+https://vuldb.com/?ctiid.265096
+https://vuldb.com/?id.265096
+https://vuldb.com/?submit.338509
+
+CVE: CVE-2024-5105
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%2010.pdf
+https://vuldb.com/?ctiid.265095
+https://vuldb.com/?id.265095
+https://vuldb.com/?submit.338508
+
+CVE: CVE-2024-5104
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%209.pdf
+https://vuldb.com/?ctiid.265094
+https://vuldb.com/?id.265094
+https://vuldb.com/?submit.338507
+
+CVE: CVE-2024-5103
+https://github.com/E1CHO/cve_hub/blob/main/Complete%20Web-Based%20School%20Management%20System%20-%20sql/Complete%20Web-Based%20School%20Management%20System%20-%20vuln%208.pdf
+https://vuldb.com/?ctiid.265093
+https://vuldb.com/?id.265093
+https://vuldb.com/?submit.338506
+
