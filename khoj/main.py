@@ -32,7 +32,7 @@ def convert_json(all_cve):
 
         data = {
         'tags': cve_data["tags"],
-        'source': "زفتا",
+        'source': "*",
         'title': cve_data["title"],
         'link': "https://nvd.nist.gov/vuln/detail/" + cve_data["CVE"],
         'summary': f"{text[:200]} ... ",
